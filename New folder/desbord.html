@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <title>Dashboard Panel</title>
+</head>
+<body>
+    <div class="navBar">
+        <div class="logoSection">
+            <img src="images/flipkart-logo.png" alt="Logo" class="flipkart-logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="menu" id="menu">
+            <a href="desbord.html">Dashboard</a>
+            <a href="desbord.html">Profile</a>
+            <a href="index.html">Settings</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Welcome to the Dashboard</h1>
+        
+        <div class="profileSection">
+            <h2>User Profile</h2>
+            <div class="profileInfo">
+                <img src="images/fashion1.webp" alt="User  Avatar" class="avatar">
+                <div class="profileDetails">
+                    <p><strong>Name:</strong>rashmika </p>
+                    <p><strong>Email:</strong> jffff@example.com</p>
+                    <p><strong>Phone:</strong> +123 456 7890</p>
+                    <p><strong>Address:</strong> 123 abc ,xyz ,pqr  </p>
+                </div>
+            </div>
+            <button class="editProfileButton">Edit Profile</button>
+        </div>
+
+        <div class="dashboardContent">
+            <h2>Dashboard Overview</h2>
+
+            <p>More content here...</p>
+            
+        </div>
+    </div>
+    
+    <script > // Toggle the menu visibility when the hamburger icon is clicked
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active'); // Toggle the active class to show/hide the menu
+        });
+        
+        // Handle the edit profile button click
+        document.querySelector('.editProfileButton').addEventListener('click', function() {
+            const profileDetails = document.querySelector('.profileDetails');
+            
+            // Check if the profile details are already editable
+            if (this.textContent === 'Edit Profile') {
+                // Change the button text to "Save"
+                this.textContent = 'Save';
+                
+                // Make profile details editable
+                const details = profileDetails.querySelectorAll('p');
+                details.forEach(detail => {
+                    const currentText = detail.textContent.split(': ')[1]; // Get the current value
+                    detail.innerHTML = `<strong>${detail.textContent.split(': ')[0]}:</strong> <input type="text" value="${currentText}" />`;
+                });
+            } else {
+                // Change the button text back to "Edit Profile"
+                this.textContent = 'Edit Profile';
+                
+                // Save the new values and update the profile details
+                const inputs = profileDetails.querySelectorAll('input');
+                inputs.forEach(input => {
+                    const label = input.previousElementSibling.innerText.replace(':', ''); // Get the label
+                    input.parentElement.innerHTML = `<strong>${label}:</strong> ${input.value}`; // Update the profile detail
+                });
+            }
+        });</script>
+</body>
+</html>

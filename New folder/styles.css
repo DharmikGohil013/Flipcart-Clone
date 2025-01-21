@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    width: 100%;
+    height: 100px;
+    background-color: #2874f0;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navBar:hover{
+    background-color: #065eea;
+    transition-duration: 5s;
+}
+
+.logoSection {
+    width: 80px;
+    display: inline;
+    margin: 2px 0px 2px 170px;
+    font-weight: 10px;
+}
+
+.flipkart-logo {
+    width: 75px;
+    height: 20.11px;
+    margin-top: 15px;
+}
+.flipkart-logo:hover{
+    transform: scale(1.1);
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    width: 75px;
+    height: 15.4px;
+    margin-bottom: 15px;
+}
+.logo-text:hover{
+    color: yellow;
+}
+
+
+
+#plus {
+    color: #ffe500;
+    font-size: 11px;
+}
+
+.searchBox {
+    width: 340px;
+    display: flex;
+    margin-right: 10px;
+    border-radius: 50px;
+    box-shadow: 0px -5px 80px rgb(255, 0, 43);
+}
+.searchBox:hover{
+    transform: scale(1.1);
+}
+
+.input {
+    height: 36px;
+    width: 564px;
+    border-radius: 5px;
+    padding: 0 16px;
+    border-radius: 2px 0 0 2px;
+    border: 0;
+    outline: 0 none;
+
+}
+
+.search-logo {
+    height: 36px;
+    width: 44px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+    padding: 4px 12px 2px 8px;
+    background-color: #fff;
+    border: 0;
+    outline: 0 none;
+    color: #2874f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBox {
+    margin-right: 10px;
+    box-shadow: 0px -0px 20px black;
+    background-image: radial-gradient(black,yellow,black);
+    position: relative;
+}
+
+.login {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: default;
+    border-radius: 2px;
+    height: 32px;
+    padding: 5px 40px;
+    text-align: center;
+}
+
+.loginBox:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    top: 40px; 
+    z-index: 1; 
+}
+
+.loginBox:hover .tooltip {
+    display: block; 
+}
+.becomeSellerBox {
+    width: 155px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.moreBox {
+    width: 50px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 15px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.cartBox {
+    width: 65px;
+    margin-right: 150px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.moreBox:hover .dropdown-content,
+.becomeSellerBox:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+
+
+
+
+
+.belowNavBar {
+    display: flex;
+    max-width: 1280px;
+    color: #212121;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.smallCard {
+     
+    width: 94px;
+    height: 112px;
+    padding: 10px;
+    margin: 0px 20px;
+}
+.smallCard:hover{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.card {
+    height: 64px;
+    width: 64px;
+}
+
+
+.smallCard p {
+    text-align: center;
+}
+
+
+.heroSection {
+    position: relative;
+    max-width: 1680px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.heroImage {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fade 9s infinite; /* Total duration for all images */
+}
+
+.image1 {
+    background-image: url('images/heroImg.png');
+    animation-delay: 0s; /* First image appears immediately */
+}
+
+.image2 {
+    background-image: url('images/a.jpg ');
+    animation-delay: 3s; /* Second image appears after 3 seconds */
+}
+
+.image3 {
+    background-image: url('images/a1.jpg');
+    animation-delay: 6s; /* Third image appears after 6 seconds */
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.itemSection {
+    max-width: 1434px;
+    height: 314px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item {
+    width: 232px;
+    height: 314px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+
+.itemImg {
+    height: 200px;
+}
+
+.itemDescription {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.buyNowText {
+    color: #388e3c;
+    padding-top: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.itemHeadName {
+    word-wrap: break-word;
+    font-size: 30px;
+    line-height: 1.38;
+    color: #2e2e2e;
+    text-align: center;
+
+}
+
+.viewAllSection {
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+
+.viewAllButton {
+    background: #2874f0;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    border: none;
+    height: 38px;
+    width: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewAllText {
+    font-size: 13px;
+
+}
+
+
+.line {
+    width: 100%;
+    border: none;
+    border-top: 8px solid rgba(213, 207, 207, 0.617);
+}
+
+.footerSection {
+    max-width: 1719px;
+    /* height: 346px; */
+    height: 200px;
+    background-color: #005eff;
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+.footerLeft {
+    display: flex;
+    width: 50%;
+    margin-left: 65px;
+    justify-content: space-evenly;
+}
+
+.footerInfo {
+    width: 252px;
+    height: 194px;
+    padding-top: 40px;
+}
+
+.footerInfoHeading {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.footerContent {
+    color: #ffffff;
+    font-size: 12px;
+
+    line-height: 2;
+}
+
+.footerRight {
+    display: flex;
+    width: 50%;
+    margin-right: 30px;
+    justify-content: space-evenly;
+}
+
+.footerExtras {
+    margin-top: 0.35px;
+    background-color: #172337;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1719px;
+    height: 70px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.copy{
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    
+   padding-top: 15px;
+    background-color: #388e3c;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+.copy:hover{
+    transform: scale(1.1);
+    color: #ffe500;
+}
